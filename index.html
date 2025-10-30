@@ -83,6 +83,7 @@
             <li class="chip">Eficiencia 80+ Gold</li>
             <li class="chip">DDR5 6000</li>
           </ul>
+        <div id="google_translate_element" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"></div>
         </div>
         <figure class="hero-media">
           <img src="images/monitor.png" width="1600" height="900" alt="Monitor 360 Hz del setup" loading="eager"
@@ -90,6 +91,15 @@
         </figure>
       </div>
     </section>
+
+    <!-- 🔤 Botones de traducción -->
+<div id="translator" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+  <button onclick="translatePage('es')" style="margin-right: 5px;">🇪🇸 Español</button>
+  <button onclick="translatePage('en')">🇬🇧 English</button>
+</div>
+
+<!-- Elemento oculto de Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
 
     <section class="beneficios" aria-labelledby="beneficios-title">
       <div class="container">
@@ -303,6 +313,29 @@
   </footer>
 
   <script src="app.js?v=4" defer></script>
+  <script type="text/javascript">
+  // Inicializa Google Translate
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',         // Idioma original de tu página
+      includedLanguages: 'en,es'  // Idiomas permitidos
+    }, 'google_translate_element');
+  }
+
+  // Función para cambiar idioma
+  function translatePage(lang) {
+    const select = document.querySelector("select.goog-te-combo");
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+    } else {
+      alert("Google Translate aún no ha cargado. Espera un segundo e inténtalo de nuevo.");
+    }
+  }
+</script>
+
+<!-- Carga el script oficial de Google Translate -->
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
