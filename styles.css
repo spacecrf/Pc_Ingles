@@ -219,7 +219,7 @@ img {
 }
 
 .carousel .slide img {
-    height: 80%;
+    height:80%;
     object-fit: contain;
     transition: transform .3s ease;
     max-width: 100%;
@@ -304,8 +304,7 @@ img {
     animation: zoomIn 0.5s ease-out;
 }
 
-#zoom-in,
-#zoom-out {
+#zoom-in, #zoom-out {
     padding: 1rem;
     border-radius: var(--radius);
     cursor: pointer;
@@ -313,25 +312,7 @@ img {
     border: 1px solid rgba(255, 255, 255, .2);
 }
 
-#zoom-in:hover,
-#zoom-out:hover {
-    background: rgba(0, 224, 255, .8);
-    border-color: rgba(0, 224, 255, 1);
-    transform: translateY(-5%) scale(1.01);
-    box-shadow: 0 4px 20px rgba(0, 224, 255, .4);
-}
-
-#btn-copiar,
-#btn-csv {
-    padding: 1rem;
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, .2);
-}
-
-#btn-copiar:hover,
-#btn-csv:hover {
+#zoom-in:hover, #zoom-out:hover {
     background: rgba(0, 224, 255, .8);
     border-color: rgba(0, 224, 255, 1);
     transform: translateY(-5%) scale(1.01);
@@ -943,23 +924,4 @@ textarea {
     .field.full {
         grid-column: span 1
     }
-
 }
-
-.btn-lang {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, .14);
-  color: var(--text);
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 0.4rem 0.8rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-lang:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  transform: translateY(-2px);
-}
-
