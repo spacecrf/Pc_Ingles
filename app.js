@@ -203,4 +203,28 @@ function init() {
   initForm();
 }
 
+
 document.addEventListener('DOMContentLoaded', init);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('toggle-lang');
+  let currentLang = localStorage.getItem('lang') || 'es';
+
+  // Función para aplicar idioma
+  const setLanguage = (lang) => {
+    document.querySelectorAll('[data-es][data-en]').forEach(el => {
+      el.textContent = lang === 'es' ? el.dataset.es : el.dataset.en;
+    });
+    toggleBtn.textContent = lang === 'es' ? toggleBtn.dataset.es : toggleBtn.dataset.en;
+    localStorage.setItem('lang', lang);
+  };
+
+  // Cambiar idioma al pulsar
+  toggleBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    setLanguage(currentLang);
+  });
+
+  // Aplicar idioma guardado al cargar
+  setLanguage(currentLang);
+});
