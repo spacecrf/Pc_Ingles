@@ -203,3 +203,4 @@ function init() {
   initForm();
 }
 
+document.addEventListener('DOMContentLoaded', init);
