@@ -947,23 +947,19 @@ textarea {
 }
 
 .btn-lang {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
-  background-color: #ff0079;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-weight: bold;
-  font-size: 1rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .14);
+  color: var(--text);
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn-lang:hover {
-  background-color: #d60068;
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
+
